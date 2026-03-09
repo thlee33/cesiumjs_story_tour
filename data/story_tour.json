@@ -1,0 +1,42 @@
+{
+  "title": "Global Landmarks Tour",
+  "description": "A showcase of world-famous landmarks using Google Photorealistic 3D Tiles.",
+  "chapters": [
+    {
+      "id": "paris_eiffel",
+      "title": "Eiffel Tower",
+      "subtitle": "Paris, France",
+      "description": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. Named after Gustave Eiffel, it stands as a global cultural icon of France.",
+      "location": { "lng": 2.2945, "lat": 48.8584, "height": 100 },
+      "camera": { "heading": 0, "pitch": -25, "range": 800 },
+      "behavior": { "flyDuration": 4, "stayDuration": 15, "rotationSpeed": -0.5 }
+    },
+    {
+      "id": "london_bigben",
+      "title": "Big Ben",
+      "subtitle": "London, UK",
+      "description": "Big Ben is the nickname for the Great Bell of the Great Clock of Westminster, known around the world for its accuracy and its massive bell.",
+      "location": { "lng": -0.1246, "lat": 51.5007, "height": 50 },
+      "camera": { "heading": 45, "pitch": -30, "range": 600 },
+      "behavior": { "flyDuration": 4, "stayDuration": 15, "rotationSpeed": 0.5 }
+    },
+    {
+      "id": "ny_statue_liberty",
+      "title": "Statue of Liberty",
+      "subtitle": "New York, USA",
+      "description": "The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor, a gift of friendship from the people of France to the United States.",
+      "location": { "lng": -74.0445, "lat": 40.6892, "height": 60 },
+      "camera": { "heading": 120, "pitch": -20, "range": 700 },
+      "behavior": { "flyDuration": 5, "stayDuration": 15, "rotationSpeed": -0.4 }
+    },
+    {
+      "id": "singapore_mbs",
+      "title": "Marina Bay Sands",
+      "subtitle": "Singapore",
+      "description": "Marina Bay Sands is an integrated resort fronting Marina Bay in Singapore. It is considered the world's most expensive standalone casino property and features an iconic rooftop Infinity Pool.",
+      "location": { "lng": 103.8591, "lat": 1.2838, "height": 150 },
+      "camera": { "heading": 220, "pitch": -35, "range": 1200 },
+      "behavior": { "flyDuration": 5, "stayDuration": 15, "rotationSpeed": 0.3 }
+    }
+  ]
+}

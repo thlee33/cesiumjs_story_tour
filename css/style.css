@@ -1,0 +1,201 @@
+/* 
+   Premium Design: Dark Theme & Glassmorphism 
+*/
+
+:root {
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent-color: #4da6ff;
+    --accent-hover: #3388ff;
+    --bg-glass: rgba(20, 20, 25, 0.7);
+    --border-glass: rgba(255, 255, 255, 0.1);
+    --panel-width: 380px;
+    --font-family: 'Pretendard', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font-family);
+    background-color: #000;
+}
+
+/* Cesium Container Full Screen */
+#cesiumContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Cesium UI Overrides (hide default clutter if wanted, keep base ones) */
+.cesium-viewer-bottom {
+    display: none !important;
+}
+
+/* Glassmorphism Panel */
+.tour-panel {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: var(--panel-width);
+    background: var(--bg-glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    padding: 24px;
+    color: var(--text-primary);
+    z-index: 10;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Header */
+.tour-header {
+    border-bottom: 1px solid var(--border-glass);
+    padding-bottom: 16px;
+}
+
+.tour-header h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.tour-header p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Chapter Info */
+.chapter-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    animation: fadeIn 0.5s ease;
+}
+
+.chapter-index {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+.chapter-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.chapter-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.chapter-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-top: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* Custom Scrollbar for desc */
+.chapter-desc::-webkit-scrollbar {
+    width: 4px;
+}
+.chapter-desc::-webkit-scrollbar-track {
+    background: transparent;
+}
+.chapter-desc::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Controls */
+.tour-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-glass);
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.play-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+    background: var(--accent-color);
+    border: none;
+    box-shadow: 0 4px 15px rgba(77, 166, 255, 0.4);
+}
+
+.play-btn:hover {
+    background: var(--accent-hover);
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--accent-color);
+    transition: width 0.1s linear;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
