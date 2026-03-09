@@ -7,7 +7,7 @@
 // ---------------------------------------------------------
 
 // TODO: Replace with a valid Cesium ion Access Token if needed for specific assets
-Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJhOGRjODVjNy1mODI4LTQ4ZmEtOWIxZi01ZGRjMGQ5ZThkYzgiLCJpZCI6MzA1NywiaWF0IjoxNzQ1Mjk0NDk4fQ.loe3_uIFrC7GnqK8gzIi7zX3Ic-vEuC9JsgkCp8N37Q';
+Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxZTBiMzA2OS04ZTMxLTQ1NjMtYjU5OC1lMWVlMWViZmI1MjgiLCJpZCI6MzA1NywiaWF0IjoxNzY5NTc0NzY3fQ.2t_Z8vHd3k6LbTHlxTZj76HiAHsCvsxms1lkM80nOB4';
 
 
 const viewer = new Cesium.Viewer('cesiumContainer', {
